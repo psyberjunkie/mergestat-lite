@@ -5,7 +5,7 @@ COPY . .
 RUN make libgit2
 RUN make
 
-FROM debian:buster-slim
+FROM debian:12.8-slim
 WORKDIR /app/
 RUN mkdir /repo
 COPY --from=builder /app/.build/mergestat .
